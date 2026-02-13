@@ -83,6 +83,26 @@ Close.BackgroundColor3 = Color3.fromRGB(120,0,0)
 Close.BorderSizePixel = 0
 Instance.new("UICorner",Close).CornerRadius = UDim.new(0,8)
 
+
+--------------------------------------------------
+-- CONTENT AREA (TOMBOL FITUR)
+--------------------------------------------------
+
+local TestButton = Instance.new("TextButton", Main)
+TestButton.Size = UDim2.fromOffset(180,40)
+TestButton.Position = UDim2.new(0.5,-90,0,70) -- 70 = di bawah header
+TestButton.Text = "Test Feature"
+TestButton.BackgroundColor3 = Color3.fromRGB(0,120,255)
+TestButton.TextColor3 = Color3.new(1,1,1)
+TestButton.Font = Enum.Font.GothamBold
+TestButton.TextSize = 14
+TestButton.BorderSizePixel = 0
+Instance.new("UICorner",TestButton).CornerRadius = UDim.new(0,12)
+
+TestButton.MouseButton1Click:Connect(function()
+	print("Button ditekan!")
+end)
+
 --------------------------------------------------
 -- EXPAND SYSTEM (SMOOTH)
 --------------------------------------------------
